@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Content-Length: 84191
+Connection: keep-alive
+CF-Cache-Status: BYPASS
+Access-Control-Allow-Origin: *
+Cache-Control: no-store
+Vary: Add-Padding
+Access-Control-Expose-Headers: Content-MD5, ETag
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Server: cloudflare
+

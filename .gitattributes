@@ -1,0 +1,2 @@
+test/fixtures/*.txt -text
+data/*.txt -text
