@@ -1,0 +1,132 @@
+/* Stand-in for saafirhale.com's globals.css: the same tokens and the few layout
+   classes the demo shell uses. On the site, the real globals.css provides these. */
+
+:root {
+  --bg: #e9e8e5;
+  --fg: #111111;
+  --fg2: #3a3936;
+  --muted: #646360;
+  --line: #cfcdc8;
+  --accent: #1d4ed8;
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --bg: #0f0f0e;
+  --fg: #eceae5;
+  --fg2: #b9b7b1;
+  --muted: #8e8c86;
+  --line: #2c2b29;
+  --accent: #ff4a3d;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent);
+}
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.sh-shell {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+}
+.sh-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 40px);
+}
+.sh-h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(44px, 7vw, 104px);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+.sh-lede {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+.sh-link-muted {
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+}
+.sh-link-muted:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.muted {
+  color: var(--muted);
+}
+
+.demo-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--fg);
+}
+.demo-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+}
+.demo-crumbs {
+  flex: 1;
+}
+.demo-theme {
+  font: inherit;
+  color: var(--fg);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.demo-theme:hover {
+  color: var(--accent);
+}
+.demo-hero {
+  padding: clamp(48px, 6vw, 80px) 0 clamp(32px, 4vw, 56px);
+}
+.demo-eyebrow {
+  margin-bottom: 20px;
+}
+.demo-lede {
+  max-width: 54ch;
+  margin: 28px 0 0;
+  color: var(--fg2);
+}
+.demo-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 20px 0 32px;
+  color: var(--muted);
+}
