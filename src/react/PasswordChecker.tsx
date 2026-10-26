@@ -203,8 +203,9 @@ export function PasswordChecker({ userInputs, defaultBreachCheck = true, generat
             <strong>Strength.</strong> Computed entirely in the page. No request is made for it.
           </li>
           <li>
-            <strong>Breach check, when on.</strong> One request per press of the button, to <code>{HOST}/range/</code> followed by{" "}
-            {PREFIX_LENGTH} hex characters of the password&rsquo;s SHA-1 hash. There are 1,048,576 possible prefixes, and the
+            <strong>Breach check, when on.</strong> One lookup per press of the button: a GET to <code>{HOST}/range/</code> followed
+            by {PREFIX_LENGTH} hex characters of the password&rsquo;s SHA-1 hash. Because of the padding header, the browser may first
+            send a CORS preflight to the same URL. There are 1,048,576 possible prefixes, and the
             response lists every breached hash that shares yours, padded with fake entries so its size gives nothing away. Like any request, it also carries your IP address and user agent, and its Origin header names this site.
           </li>
           <li>

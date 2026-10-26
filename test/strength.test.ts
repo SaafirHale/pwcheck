@@ -30,10 +30,17 @@ describe("weaknesses", () => {
     ["12/25/1990x", "date"],
     ["summer2019", "recent-year"],
     ["summer2019", "dictionary-word"],
+    ["Fitzgerald", "name"],
   ];
 
   it.each(cases)("%s is flagged as %s", (password, kind) => {
     expect(kinds(password)).toContain(kind);
+  });
+
+  it("flags words passed as user inputs as personal", () => {
+    const w = est.check("saafirhale99", ["saafirhale"]).weaknesses[0]!;
+    expect(w.kind).toBe("personal");
+    expect(w.revealed.token).toBe("saafirhale");
   });
 
   it("explains l33t swaps in the revealed note", () => {
