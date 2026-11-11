@@ -142,7 +142,6 @@ The dev server runs on port 5179. `npm run build:demo` writes the static page, w
 `dist-demo/`, and `npm run preview` serves that build on port 5180. `npm run build` emits the
 library to `dist/`.
 
-On this machine npm needs `NODE_OPTIONS=--use-system-ca` because of the TLS-intercepting proxy.
 
 ### In a Next.js page
 
