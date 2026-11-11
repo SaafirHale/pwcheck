@@ -3,8 +3,8 @@
 Draft for `src/content/projects.ts` in saafirhale-site, in the shape of its `Project` type. Every
 claim below can be checked against this repo: the code, the tests (`npm test`) or the README.
 
-`status` is `"personal"` because there is no public link yet. Once the repo is public or the tool is
-live at `/tools/password`, switch it to `"live"` and add the links.
+`status` is `"live"` because the source is public at https://github.com/SaafirHale/pwcheck. When the
+tool is deployed at `/tools/password`, add that as a second link.
 
 ```ts
 {
@@ -20,8 +20,8 @@ live at `/tools/password`, switch it to `"live"` and add the links.
     "A passphrase generator draws from the EFF Large Wordlist with crypto.getRandomValues and rejection sampling, and shows the exact entropy: about 12.9 bits per word, 77.5 bits for six. The k-anonymity logic is tested against a recorded, padded range response, covering the prefix/suffix split, dropped padding entries and case handling.",
   ],
   stack: ["TypeScript", "React", "zxcvbn-ts", "Web Crypto", "Have I Been Pwned API", "Vitest"],
-  links: [],
-  status: "personal",
+  links: [{ label: "github.com/SaafirHale/pwcheck", href: "https://github.com/SaafirHale/pwcheck" }],
+  status: "live",
 },
 ```
 
