@@ -140,7 +140,8 @@ npm run dev
 
 The dev server runs on port 5179. `npm run build:demo` writes the static page, with its CSP, to
 `dist-demo/`, and `npm run preview` serves that build on port 5180. `npm run build` emits the
-library to `dist/`.
+library to `dist/`; `prepare` runs the same build, so installing from GitHub
+(`github:SaafirHale/pwcheck#<commit>`) produces `dist/` without committing it.
 
 
 ### In a Next.js page

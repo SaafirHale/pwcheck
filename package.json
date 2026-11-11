@@ -25,6 +25,7 @@
   "scripts": {
     "dev": "vite",
     "build": "node scripts/build-lib.mjs",
+    "prepare": "node scripts/build-lib.mjs",
     "build:demo": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
